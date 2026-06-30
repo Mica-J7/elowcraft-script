@@ -1,0 +1,41 @@
+# Moments candidats - VOD 2808271898
+# 4 moment(s) detecte(s)
+
+## Moment 1 - 00:59:50
+Lien: https://www.twitch.tv/videos/2808271898?t=00h59m50s
+Pic de chat a 01:00:00 (9 msg sur 15s, 18 msg sur la fenetre)
+Exemples de messages:
+  - revenons au jeu
+  - Non Antoine y a que toi qui l'a fait KEKW
+  - oh la musique de baise
+  - haah la même KEKW
+
+## Moment 2 - 01:01:35
+Lien: https://www.twitch.tv/videos/2808271898?t=01h01m35s
+Pic de chat a 01:01:45 (13 msg sur 15s, 22 msg sur la fenetre)
+Emotes: 58765 x1, NotLikeThis x1
+Exemples de messages:
+  - NotLikeThis
+  - SI
+  - il est mort dès le début non?
+  - Il l'a tué au tout début non ?
+
+## Moment 3 - 01:03:05
+Lien: https://www.twitch.tv/videos/2808271898?t=01h03m05s
+Pic de chat a 01:03:15 (15 msg sur 15s, 24 msg sur la fenetre)
+Emotes: 425618 x4, LUL x4, 30259 x1
+Exemples de messages:
+  - KEKW
+  - MDR
+  - KEKW
+  - KWEK
+
+## Moment 4 - 01:08:35
+Lien: https://www.twitch.tv/videos/2808271898?t=01h08m35s
+Pic de chat a 01:08:45 (25 msg sur 15s, 25 msg sur la fenetre)
+Emotes: emotesv2_6b7962b270c84cf0a98a3603e669d7fd x5, NasaSparkle x5, 555555560 x1
+Exemples de messages:
+  - invisible
+  - banger
+  - la meta pose JDG EZ
+  - ici  c'est la meta pdc de Thomas Pesquet
