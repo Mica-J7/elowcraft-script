@@ -1,4 +1,5 @@
 """Streamlit UI for chat-based highlight detection on Twitch VODs."""
+import json
 import sys
 from pathlib import Path
 
@@ -80,8 +81,16 @@ with tab_analyse:
         else:
             st.info(f"Chat déjà téléchargé, réutilisation de {chat_path.name}")
 
-        with st.spinner("Analyse en cours..."):
+        try:
             comments = load_comments(chat_path)
+        except json.JSONDecodeError:
+            st.warning(f"{chat_path.name} est vide ou corrompu, re-téléchargement...")
+            chat_path.unlink(missing_ok=True)
+            with st.spinner("Téléchargement du chat Twitch..."):
+                download_chat(vod_input, chat_path, DEFAULT_TOOL_PATH)
+            comments = load_comments(chat_path)
+
+        with st.spinner("Analyse en cours..."):
             bins = build_bins(comments, bin_size)
             spike_bins = detect_spike_bins(bins, BASELINE_WINDOW_BINS, ratio_threshold, min_count)
             moments = merge_into_moments(spike_bins, bins, bin_size, merge_gap)

@@ -36,14 +36,21 @@ def build_vod_url(vod: str) -> str:
 
 def download_chat(vod: str, output_path: Path, tool_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    # Download to a temp file so a partial/empty file never sits at output_path
+    # (keeps the .json extension, which TwitchDownloaderCLI uses to pick the format)
+    tmp_path = output_path.with_suffix(".part.json")
     cmd = [
         str(tool_path), "chatdownload",
         "-u", vod,
-        "-o", str(output_path),
+        "-o", str(tmp_path),
         "--collision", "Overwrite",
     ]
     print(f"Downloading chat: {' '.join(cmd)}")
-    subprocess.run(cmd, check=True)
+    try:
+        subprocess.run(cmd, check=True)
+        tmp_path.replace(output_path)
+    finally:
+        tmp_path.unlink(missing_ok=True)
 
 
 def load_comments(path: Path) -> list:
